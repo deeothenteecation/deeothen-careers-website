@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Deeothen T. Cation Careers</title>
+    <title>BryGC Inc. Careers</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
@@ -15,17 +15,29 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="text-center mt-4 mb-5">Bryan Job Openings</h1>
+      <h1 class="text-center mt-4 mb-5">{{company_name}} Job Openings</h1>
       <img class="img-fluid" id="banner" src = "https://deeothen-careers-website--deeothenteecati.repl.co/static/banner.jpg" >
-      <h2 class="text-center mt-4 mb-2">About Bryan</h2>
+      <h2 class="text-center mt-4 mb-2">About {{company_name}}</h2>
       <p class="lead">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Phen is an essence of truthfulness, love, and sincerity. Another reason is that she showers her family with her blessing and live. Furthermore, she gives us everything but never demand anything in return. The way she cares for everyone in the family inspires everybody to the same in our future.
       </p>
-      <h2 class="text-center mt-4 mb-3">Different Positions</h2>
-      <p>TO DO - Show the jobs here</p>
+      <h2 class="text-center mt-4 mb-3">Open Positions</h2>
+      <div>
+        {% for job in jobs %}
+        <div style=margin-bottom:16px>
+          <h4 
+            style="color:rgb(120,120,120); 
+            margin-bottom:2px">
+            {{job['title']}}
+          </h4>
+          <div><b>Location: </b>{{job['location']}}</div>
+          <div><b>Salary: </b>{{job['salary']}}</div>
+        </div>
+        {% endfor %}
+      </div>
       <div class="text-center">
       <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">Copyright 2023, Bryan</p2>
+      <p class="mt-4">Copyright 2023, Bryan G. Caracas</p2>
       </div>
     </div>
   </body>
