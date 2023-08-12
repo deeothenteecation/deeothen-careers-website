@@ -10,17 +10,25 @@
         width: 100%;
         height: 360px;
         object-fit: cover;
+        margin-bottom: 10px
       }
     </style>
   </head>
   <body>
+    {% include 'nav.html' %}
     <div class="container">
-      <h1 class="text-center mt-4 mb-5">{{company_name}} Job Openings</h1>
       <img class="img-fluid" id="banner" src = "https://deeothen-careers-website--deeothenteecati.repl.co/static/banner.jpg" >
-      <h2 class="text-center mt-4 mb-2">About {{company_name}}</h2>
+      <h1 class="text-center mt-4 mb-4">{{company_name}} Job Openings</h1>
+      <div class="row" style="margin-bottom:16px">
+        <div class="col-6"
       <p class="lead">
-        Phen is an essence of truthfulness, love, and sincerity. Another reason is that she showers her family with her blessing and live. Furthermore, she gives us everything but never demand anything in return. The way she cares for everyone in the family inspires everybody to the same in our future.
+        Phen is an essence of truthfulness, love, and sincerity. Another reason is that she showers her family with her blessing and live. Furthermore, she gives us everything but never demand anything in return. The way she cares for everyone in the family inspires everybody to the same in our future.  Today women are more independant and educated than they were in the past and they share equal rights and responsibilities as men. But when women that work decide to get married and have children too and decide to continue working, then they must struggle to balance their domestic and professional roles. Part -time jobs is the solution which working women can today consider in order to balance child-care and their financial obligations.
       </p>
+        </div>
+        <div class="col-6">
+        <img src="/static/people.jpg" style="height:320px;border-radius:4px">
+        </div>
+        </div>
       <h2 class="text-center mt-4 mb-3">Open Positions</h2>
       <div>
         {% for job in jobs %}
@@ -29,7 +37,7 @@
       </div>
       <div class="text-center">
       <button class="btn btn-primary btn-lg">Contact Us</button>
-      <p class="mt-4">Copyright 2023, Bryan G. Caracas</p2>
+      {% include 'footer.html' %}
       </div>
     </div>
   </body>
